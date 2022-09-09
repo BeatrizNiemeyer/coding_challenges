@@ -1,3 +1,4 @@
+# 1436
 # You are given the array paths, where paths[i] = [cityAi, cityBi] means there
 # exists a direct path going from cityAi to cityBi. Return the destination city,
 #  that is, the city without any path outgoing to another city.
@@ -28,7 +29,9 @@ def destCity(paths):
 
 print(destCity([["pYyNGfBYbm", "wxAscRuzOl"], ["kzwEQHfwce", "pYyNGfBYbm"]]))
 
+# --------------------------------------------------------------------------------------------------------
 
+# 1365
 # Given the array nums, for each nums[i] find out how many numbers
 # in the array are smaller than it. That is, for each nums[i] you
 # have to count the number of valid j's such that j != i and nums[j] < nums[i].
@@ -39,8 +42,7 @@ print(destCity([["pYyNGfBYbm", "wxAscRuzOl"], ["kzwEQHfwce", "pYyNGfBYbm"]]))
 # Output: [4,0,1,1,3]
 
 
-def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
-
+def smallerNumbersThanCurrent(nums):
     copy_list = nums[:]
     result_list = []
 
@@ -52,3 +54,6 @@ def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
         result_list.append(count)
 
     return result_list
+
+
+# -------------------------------------------------------------------------------------------------------
