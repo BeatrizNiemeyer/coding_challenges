@@ -57,3 +57,58 @@ def smallerNumbersThanCurrent(nums):
 
 
 # -------------------------------------------------------------------------------------------------------
+
+# 6
+# The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this:
+# (you may want to display this pattern in a fixed font for better legibility)
+# And then read line by line: "PAHNAPLSIIGYIR"
+# Write the code that will take a string and make this conversion given a number of rows:
+# string convert(string s, int numRows);
+
+
+# Example:
+
+# Input: s = "PAYPALISHIRING", numRows = 3
+# Output: "PAHNAPLSIIGYIR"
+
+
+def convert(s, numRows):
+    # first let's create a dictionary, where we are going to store the chars for each row
+
+    # P   A
+    # A P L
+    # Y   I ...
+
+    # If numRows is 3, the sequence of rows would be 123212321 ...
+
+    d = {row: "" for row in range(1, numRows + 1)}
+
+    # we are starting at row 1:
+
+    row = 1
+
+    # we need to have a variable up, so when the count is less than the numRows, we can deactivate it
+
+    up = True
+
+    for char in s:
+        d[row] += char
+        print(d)
+        if row == 1 or (row < numRows and up):
+            row += 1
+            up = True
+        else:
+            row -= 1
+            up = False
+
+    print(d)
+
+    convert = ""
+
+    for value in d.values():
+        convert += value
+
+    print(convert)
+
+
+convert("PAYPALISHIRING", 3)

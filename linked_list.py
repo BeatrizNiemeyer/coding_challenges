@@ -5,14 +5,14 @@
 
 # EXAMPLE
 # Input: l1 = [2,4,3], l2 = [5,6,4]
-#Output: [7,0,8]
-#Explanation: 342 + 465 = 807.
+# Output: [7,0,8]
+# Explanation: 342 + 465 = 807.
 
 # Input: l1 = [0], l2 = [0]
-#Output: [0]
+# Output: [0]
 
 # Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
-#Output: [8,9,9,9,0,0,0,1]
+# Output: [8,9,9,9,0,0,0,1]
 
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -48,50 +48,50 @@ class Solution:
 
 # dummy -> None
 
-#l1.val = 1
-#l2.val = 4
-#val = 5
+# l1.val = 1
+# l2.val = 4
+# val = 5
 # carry = 0
-#val =  5
+# val =  5
 
-#curr.next = node(5) [ dummy - node(5)]
-#curr = node(5)
+# curr.next = node(5) [ dummy - node(5)]
+# curr = node(5)
 
-#l1 = node2
-#l2 = node3
+# l1 = node2
+# l2 = node3
 
 # -----
 
-#l1.val = 2
-#l2.val = 5
-#val = 7
+# l1.val = 2
+# l2.val = 5
+# val = 7
 # carry = 0
-#val =  7
+# val =  7
 
-#curr.next = node(7) [ dummy - [node(5) - node(7)]]
-#curr = node(7)
+# curr.next = node(7) [ dummy - [node(5) - node(7)]]
+# curr = node(7)
 
-#l1 = node3
-#l2 = node4
+# l1 = node3
+# l2 = node4
 
 # -----
 
-#l1.val = 3
-#l2.val = 6
-#val = 9
+# l1.val = 3
+# l2.val = 6
+# val = 9
 # carry = 0
-#val =  9
+# val =  9
 
-#curr.next = node(9) [ dummy - [node(5) - node(7) - node(9)]]
-#curr = node(9)
+# curr.next = node(9) [ dummy - [node(5) - node(7) - node(9)]]
+# curr = node(9)
 
-#l1 = None
-#l2 = None
-#carry = 0
+# l1 = None
+# l2 = None
+# carry = 0
 
 # break
 
-#dummy.next = [node(5) - node(7) - node(9)]
+# dummy.next = [node(5) - node(7) - node(9)]
 
 
 node1 = ListNode()
