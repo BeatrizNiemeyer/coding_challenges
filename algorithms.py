@@ -120,22 +120,15 @@ target = 1
 def sum_closest_target(nums, target):
 
     nums = sorted(nums)
-    print(nums)
     closest = 10000000
     for i in range(len(nums) - 2):
-
-        if nums[i] == nums[i + 1] and i != 0:
-            continue
 
         lower = i + 1
         higher = len(nums) - 1
 
         while lower < higher:
 
-            print(lower, higher, i)
-
             sum = nums[i] + nums[lower] + nums[higher]
-            print(sum)
 
             if sum == target:
                 return sum
@@ -143,15 +136,20 @@ def sum_closest_target(nums, target):
             if abs(target - sum) < abs(target - closest):
                 closest = sum
 
-            if sum < target:
+            if sum <= target:
                 lower += 1
-                while nums[lower] == nums[i - 1] and lower < higher:
-                    lower += 1
 
             if sum > target:
                 higher -= 1
 
+            print(higher, lower)
     return closest
 
 
 print(sum_closest_target([4, 0, 5, -5, 3, 3, 0, -4, -5], -2))
+
+
+def stock(prices):
+
+    for i in range(len(prices) - 1):
+        if prices[i] == prices[i + 1] and i != 0:
